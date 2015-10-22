@@ -1,0 +1,10 @@
+# CMAME files
+CMakeLists.txt.user
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+
+# Compiled Static libraries
+/build/
