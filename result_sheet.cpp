@@ -19,7 +19,7 @@ ResultSheet::ResultSheet(std::string filename) : file_exists_(true), io_error_(f
                 if(match.valid())
                     matches_.push_back(Match(line));
                 else
-                    std::cerr << "Skipping erroneous line: " << line << "!";
+                    std::cerr << "Skipping erroneous line: " << line << std::endl;
             }
             in.close();
         }

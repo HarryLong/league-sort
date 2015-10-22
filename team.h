@@ -19,6 +19,7 @@ public:
     ~Team();
     bool operator ==(const Team &other) const;
     bool operator < (const Team &other) const;
+    bool operator > (const Team &other) const;
 
     std::string getName() const;
     int getPoints() const;

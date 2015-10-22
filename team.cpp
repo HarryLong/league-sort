@@ -23,6 +23,14 @@ bool Team::operator < (const Team & other) const
     return points_ > other.getPoints();
 }
 
+bool Team::operator > (const Team & other) const
+{
+    if(points_ == other.getPoints()) // Alphabetical sort necessary
+        return name_.compare(other.getName()) > 0;
+
+    return points_ < other.getPoints();
+}
+
 std::string Team::getName() const
 {
     return name_;
