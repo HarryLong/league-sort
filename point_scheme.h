@@ -1,5 +1,13 @@
+/**
+  Author: @Harry Long
+
+  A point scheme outlines the points granted/removed for individual wins and losses.
+  To implement your own, simply subclass PointScheme (see BasePointScheme for example)
+  */
+
 #ifndef POINT_SCHEME_H
 #define POINT_SCHEME_H
+
 
 class PointScheme
 {

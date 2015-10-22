@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cstdio>
 #include <string>
-#include "file_utils.h"
 #include "result_sheet.h"
 #include "championship_simulator.h"
 #include "point_scheme.h"

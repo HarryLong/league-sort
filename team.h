@@ -1,3 +1,8 @@
+/**
+  Author: @Harry Long
+
+  Represents a championship Team
+  */
 #ifndef TEAM_H
 #define TEAM_H
 
@@ -6,6 +11,10 @@
 class Team
 {
 public:
+    /**
+     * @brief Team Constructs a new Team with the given name
+     * @param name
+     */
     Team(std::string name);
     ~Team();
     bool operator ==(const Team &other) const;
