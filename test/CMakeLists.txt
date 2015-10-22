@@ -1,7 +1,5 @@
 find_package(CppUnit REQUIRED)
 
-set(CMAKE_AUTOMOC ON)
-
 set(INCLUDE_DIRECTORIES ${CppUnit_INCLUDE_DIRS})
 include_directories(${INCLUDE_DIRECTORIES})
 
