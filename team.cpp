@@ -18,7 +18,7 @@ bool Team::operator ==(const Team &other) const
 bool Team::operator < (const Team & other) const
 {
     if(points_ == other.getPoints()) // Alphabetical sort necessary
-        return name_.compare(other.getName()) > 0;
+        return name_.compare(other.getName()) < 0;
 
     return points_ > other.getPoints();
 }

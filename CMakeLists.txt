@@ -8,7 +8,7 @@ SET(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -O0 -g -std=c++11")
 #SET(CMAKE_BUILD_TYPE RELEASE)
 SET(CMAKE_BUILD_TYPE RELWITHDEBINFO)
 
-SET(SOURCE_FILES main file_utils team point_scheme result_sheet match)
+SET(SOURCE_FILES main file_utils team point_scheme result_sheet match championship_simulator)
 
 add_executable(LeagueSort ${SOURCE_FILES})
 

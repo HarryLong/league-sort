@@ -3,7 +3,7 @@
 #include "file_utils.h"
 #include <iostream>
 
-ResultSheet::ResultSheet(std::string filename) : file_exists_(true), io_error_(false), syntax_valid_(true)
+ResultSheet::ResultSheet(std::string filename) : file_exists_(true), io_error_(false)
 {
     // First perform an integrity check
     if(FileUtils::exists(filename))
@@ -16,9 +16,10 @@ ResultSheet::ResultSheet(std::string filename) : file_exists_(true), io_error_(f
             while(std::getline(in, line))
             {
                 Match match(line);
-                std::cout << match.getSideOne().name << " VS " << match.getSideTwo().name << " [ " << match.getSideOne().score << " - " << match.getSideTwo().score << "]" << std::endl;
-
-                matches_.push_back(Match(line));
+                if(match.valid())
+                    matches_.push_back(Match(line));
+                else
+                    std::cerr << "Skipping erroneous line: " << line << "!";
             }
             in.close();
         }
@@ -41,17 +42,12 @@ std::vector<Match> ResultSheet::getMatches() const
 
 bool ResultSheet::valid() const
 {
-    return fileExists() && validSyntax() && !ioError();
+    return fileExists() && !ioError();
 }
 
 bool ResultSheet::fileExists() const
 {
     return file_exists_;
-}
-
-bool ResultSheet::validSyntax() const
-{
-    return syntax_valid_;
 }
 
 bool ResultSheet::ioError() const

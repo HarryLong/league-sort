@@ -2,7 +2,6 @@
 #define MATCH_H
 
 #include <regex>
-#include "team.h"
 
 class Match
 {
@@ -18,7 +17,9 @@ public:
     Side getSideOne() const;
     Side getSideTwo() const;
 
-    bool syntaxValid() const;
+    int winning_team();
+
+    bool valid() const;
 
 private:
     bool syntax_valid_;

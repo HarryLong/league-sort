@@ -27,7 +27,7 @@ Match::~Match()
 
 }
 
-bool Match::syntaxValid() const
+bool Match::valid() const
 {
     return syntax_valid_;
 }

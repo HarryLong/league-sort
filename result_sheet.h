@@ -15,11 +15,9 @@ public:
 
     bool valid() const;
     bool fileExists() const;
-    bool validSyntax() const;
     bool ioError() const;
 
 private:
-    bool syntax_valid_;
     bool io_error_;
     bool file_exists_;
 
