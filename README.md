@@ -8,7 +8,7 @@ make
 ./leagueSort  
 
 ## Dependencies  
-C++11
+C++11  
 CMake (>= 2.8) --> https://cmake.org/download/  
 cppunit (for unit tests) --> http://sourceforge.net/projects/cppunit/  
 
